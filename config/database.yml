@@ -14,7 +14,7 @@ development:
   reconnect: false
   database: shabbat_development
   pool: 5
-  username: shabbat
+  username: root
   password:
   host: localhost
 
@@ -27,7 +27,7 @@ test:
   reconnect: false
   database: shabbat_test
   pool: 5
-  username: shabbat
+  username: root
   password:
   host: localhost
 
