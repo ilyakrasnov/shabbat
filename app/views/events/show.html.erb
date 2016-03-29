@@ -1,1 +1,30 @@
-<%= @event.inspect %>
+<h1><%= @event.name %></h1>
+<% @event.meals.each do |meal| %>
+
+<p></p>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><%= meal.name %></div>
+  <!--div class="panel-body">
+  </div-->
+
+  <table class="table">
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Item</th>
+      <th>Responsible</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% meal.items.each_with_index do |item, nr| -%>
+      <tr>
+        <th scope="row"><%= nr + 1 %></th>
+        <td><%= item.name %></td>
+        <td><%= item.responsible %></td>
+      </tr>
+    <% end -%>
+  </table>
+</div>
+
+<% end %>
