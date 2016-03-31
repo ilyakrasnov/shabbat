@@ -5,8 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-user = CreateAdminService.new.call
-puts 'CREATED ADMIN USER: ' << user.email
+# user = CreateAdminService.new.call
+# puts 'CREATED ADMIN USER: ' << user.email
 
 event = Event.create(name: 'Shabbat in Jerusalem')
 meal1 = Meal.create(name: 'Evening', event: event)
