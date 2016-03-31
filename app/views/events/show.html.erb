@@ -1,4 +1,4 @@
-<h1><%= @event.name %></h1>
+<h1 id='<%= @event.id %>'><%= best_in_place @event, :name, as: :input %></h1>
 <% @event.meals.each do |meal| %>
 
 <p></p>
@@ -21,7 +21,8 @@
       <tr>
         <th scope="row"><%= nr + 1 %></th>
         <td><%= item.name %></td>
-        <td><%= item.responsible %></td>
+        <%# <td><%= item.responsible %1> %>
+        <td><%= best_in_place item, :responsible, :as => :input, path: event_meal_item_path(@event.id, meal.id, item.id) %></td>
       </tr>
     <% end -%>
   </table>
