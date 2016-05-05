@@ -23,9 +23,8 @@ class ItemsController < ApplicationController
 
   def update
     @item = Item.find params[:id]
-    if @item.update_attributes(item_params)
-      redirect_to :action => 'show', :id => @item.id
-    end
+    @item.update_attributes(item_params)
+    respond_with @item
   end
 
   def item_params
