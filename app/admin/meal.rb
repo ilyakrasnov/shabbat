@@ -1,6 +1,6 @@
 ActiveAdmin.register Meal do
   permit_params :name,
-      items_attributes: [:id, :name, :_destroy]
+      items_attributes: [:id, :name, :description, :responsible, :_destroy]
 
   show do
     attributes_table do
